@@ -8,7 +8,7 @@
         <!-- FONT-AWESOME -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- CSS -->
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="./css/style.css">
         <!-- VUE JS -->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <!-- AXIOS -->
@@ -19,14 +19,16 @@
     <body>
         <div id="app">    
             <main>
-                <h1>
-                    COSE DA FARE
-                </h1>
-                <ul>
-                    <li v-for="single_todo in todo_list">
-                        {{ single_todo.todo }}
-                    </li>
-                </ul>
+                <div class="container py-4">
+                    <h1 class="text-center">
+                        COSE DA FARE
+                    </h1>
+                    <ul>
+                        <li v-for="single_todo in todo_list" :class="single_todo.done == true ? 'done' : '' " class="">
+                            {{ single_todo.todo }}
+                        </li>
+                    </ul>
+                </div>
             </main>
         </div>
 

@@ -1,20 +1,26 @@
 [
     {
-        "todo": "Andare al parco"
+        "todo": "Andare al parco",
+        "done": true
     },
     {
-        "todo": "Lavare casa"
+        "todo": "Lavare casa",
+        "done": false
     },
     {
-        "todo": "Fare la spesa"
+        "todo": "Fare la spesa",
+        "done": true
     },
     {
-        "todo": "Giocare a calcetto"
+        "todo": "Giocare a calcetto",
+        "done": false
     },
     {
-        "todo": "Portare a spasso il cane"
+        "todo": "Portare a spasso il cane",
+        "done": false
     },
     {
-        "todo": "Comprare vestiti"
+        "todo": "Comprare vestiti",
+        "done": true
     }
 ]
