@@ -14,7 +14,7 @@
         <!-- AXIOS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.5/axios.min.js" integrity="sha512-TjBzDQIDnc6pWyeM1bhMnDxtWH0QpOXMcVooglXrali/Tj7W569/wd4E8EDjk1CwOAOPSJon1VfcEt1BI4xIrA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        <title>Template PHP</title>
+        <title>Todo List PHP</title>
     </head>
     <body>
         <div id="app">    
@@ -23,9 +23,16 @@
                     <h1 class="text-center">
                         COSE DA FARE
                     </h1>
-                    <ul>
-                        <li v-for="single_todo in todo_list" :class="single_todo.done == true ? 'done' : '' " class="">
-                            {{ single_todo.todo }}
+                    <div>
+                        <input type="text" v-model="newTodo">
+                        <button @click="add_todo()">Aggiungi</button>
+                    </div>
+                    <ul class="d-flex flex-column-reverse ">
+                        <li v-for="single_todo in todo_list" class="row">
+                            <div class="col" :class="single_todo.done == true ? 'done' : '' ">
+                                {{ single_todo.todo }}
+                            </div>
+                            <button class="col-auto" @click="remove_todo()">X</button>
                         </li>
                     </ul>
                 </div>
